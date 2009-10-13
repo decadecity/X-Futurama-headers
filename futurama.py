@@ -8,7 +8,7 @@ This code is placed in the public domain.
 
 def get_header():
     quote_list = []
-    for quote in csv.reader(open(sys.path[0]+'/futurama.csv')):
+    for quote in csv.reader(open(os.path.dirname(__file__)+'/futurama.csv')):
         if len(quote) == 2:
             quote_list.append(quote)
     if len(quote_list) == 0:
