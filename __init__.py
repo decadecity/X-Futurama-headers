@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import futurama
 import logging
+
+
 try:
     from django.core.cache import cache
 except ImportError:
