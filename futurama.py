@@ -12,9 +12,10 @@ This code is placed in the public domain.
 """
 
 quote_list = []
-for quote in csv.reader(open(os.path.dirname(__file__) + '/futurama.csv')):
-    if len(quote) == 2:
-        quote_list.append(quote)
+with open(os.path.dirname(__file__) + '/futurama.csv') as quotes:
+    for quote in csv.reader(quotes):
+        if len(quote) == 2:
+            quote_list.append(quote)
 if len(quote_list) == 0:
     quote_list.append(('Bender', "Well, we're boned!"))
 
@@ -23,4 +24,4 @@ def get_header():
     return ('X-%s' % quote[0].replace(' ', '-'), quote[1])
 
 if __name__ == '__main__':
-    print get_header()
+    print(get_header())
