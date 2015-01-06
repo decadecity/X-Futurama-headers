@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from . import futurama
-import logging
 
+"""Django middleware to add the quote."""
 
 class AddQuote():
 
