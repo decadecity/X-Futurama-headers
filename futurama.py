@@ -16,6 +16,7 @@ try:
             quote_list.append(quote)
 except IOError:
     pass
+
 if len(quote_list) == 0:
     quote_list.append(('Bender', "Well, we're boned!"))
 
