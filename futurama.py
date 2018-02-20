@@ -11,9 +11,10 @@ This code is placed in the public domain.
 
 quote_list = []
 try:
-    for quote in csv_reader(open(path_join(path_dirname(__file__), 'futurama.csv'))):
-        if len(quote) == 2:
-            quote_list.append(quote)
+    with open(path_join(path_dirname(__file__), 'futurama.csv')) as quote_file:
+        for quote in csv_reader(quote_file):
+            if len(quote) == 2:
+                quote_list.append(quote)
 except IOError:
     pass
 
